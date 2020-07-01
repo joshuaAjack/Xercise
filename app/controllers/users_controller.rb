@@ -6,9 +6,14 @@ class UsersController < ApplicationController
    end
 
    post '/signup' do 
-    @user = User.new(name: params[:name], email: params[:email], password: params[:password])
-    @user.save
-    session[:user_id] = @user.id
-    redirect 'users/account'
+    @user = User.new
+    @user.email = params[:email]
+    @user.password = params[:password]
+
+    if @user.save 
+    redirect 'users/login'
+    else 
+      redirect '/forms/signup'
   end
+ end
 end

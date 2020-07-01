@@ -8,7 +8,7 @@ class ApplicationController < Sinatra::Base
     set :public_folder, 'public'
     set :views, 'app/views'
     enable :sessions
-    set :session_secret, "TResource"
+    set :session_secret, "xercise-123"
   end
     
   get "/" do
