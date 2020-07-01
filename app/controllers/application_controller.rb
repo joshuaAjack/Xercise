@@ -1,6 +1,6 @@
 require './config/environment'
   # register Sinatra::ActiveRecordExtension
-
+  require_relative '../helpers/helpers'
 class ApplicationController < Sinatra::Base
    register Sinatra::ActiveRecordExtension
  
