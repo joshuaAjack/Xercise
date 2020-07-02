@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
       end
 
       post '/login' do
-        @user = User.find_by(:email => params[:email] )
+        @user = Users.find_by(:email => params[:email] )
         if @user && @user.authenticate(params[:password])
           session[:user_id] = @user.id
       redirect '/users/account'
@@ -21,7 +21,7 @@ class SessionsController < ApplicationController
   end
  
   get '/users/account' do
-    @user = User.find(session[:user_id]) 
+    @user = Users.find(session[:user_id]) 
     erb :'/users/account'
   end
 end
