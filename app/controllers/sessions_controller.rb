@@ -1,4 +1,4 @@
-class SessionController < ApplicationController
+class SessionsController < ApplicationController
 
     get '/sessions/login' do
   
@@ -6,7 +6,6 @@ class SessionController < ApplicationController
       end
 
       post '/login' do
-        binding.pry
         @user = User.find_by(:email => params[:email] )
         if @user && @user.authenticate(params[:password])
           session[:user_id] = @user.id
