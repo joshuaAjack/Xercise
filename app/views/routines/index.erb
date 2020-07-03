@@ -1,0 +1,10 @@
+<% if @routine.empty? %>
+<p> empty </p>
+<a href='/routines/new'>Create Routine</a>
+<% else %>
+<% @routine.each do |routines| %>
+<p>
+<a href='/rounties/<%=routines.id %>'><%= routines.title %></a>
+</p>
+<% end %>
+<% end %>

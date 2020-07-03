@@ -1,0 +1,19 @@
+<label for='title'> Title </label>
+<%= @routine.title %>
+<label for='description'> Description </label>
+<%= @routine.description %>
+<label for='sets'>Sets</label>
+<%= @routine.sets %>
+<label for='reps'>reps</label>
+<%= @routine.reps %>
+<label for='rest'>rest</label>
+<%= @routine.rest %>
+<label for='exercise'>exercise</label>
+<%= @routine.exercise %>
+<label for='durarion'>durarion</label>
+<%= @routine.duration %>
+
+<form action='/routines/<%=@routine.id%>/delete' method='POST'>
+   <input id="hidden" type="hidden" name="_method" value="delete">
+      <input type="submit" value="delete">
+</form>

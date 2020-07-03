@@ -1,3 +1,0 @@
-class RoutineController < ApplicationController
-    
-end

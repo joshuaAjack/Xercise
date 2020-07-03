@@ -1,0 +1,25 @@
+<form action='/routines/<%=@routine.id%>' method='POST'>
+ <input id="hidden" type="hidden" name="_method" value="patch">
+    <label for='title'>Routine Title</label>
+    <input type="text" name="title" value= <%= @routine.title %>> <br>
+
+     <label for='description'>Description</label>
+     <input type="text" name="description" value= <%= @routine.description %>> <br>
+
+      <label for='sets'>How many sets?</label>
+     <input type="text" name="sets" value= <%= @routine.sets %>> <br>
+     
+       <label for='reps'>How many reps?</label>
+     <input type="text" name="reps" value= <%= @routine.reps %>> <br>
+
+       <label for='rest'>How long should you rest?</label>
+     <input type="text" name="rest" value= <%= @routine.rest %>> <br>
+
+       <label for='exercise'>What part of the body does this work on?</label>
+     <input type="text" name="exercise" value= <%= @routine.exercise %>> <br>
+
+       <label for='duration'>How long is the routine?</label>
+     <input type="text" name="duration" value= <%= @routine.duration %>> <br>
+
+    <input type="submit" value="Submit">
+</form> 
