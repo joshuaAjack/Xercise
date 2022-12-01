@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'corneal'
-gem 'sinatra', '~> 2.0'
+gem 'sinatra', '~> 2.2'
 gem 'activerecord', '~> 5.1', '>= 5.1.5'
 gem 'sinatra-activerecord', '~> 2.0', '>= 2.0.13'
 gem 'rake'
